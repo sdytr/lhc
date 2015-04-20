@@ -1,8 +1,8 @@
 # lhc
 
-<a href="resources/images/lhc.jpg"><img src="resources/images/lhc-small.jpg" /></a>
-
 *Little (LFE) HTTP Client -- A light-weight LFE wrapper around lhttpc*
+
+<a href="resources/images/lhc.jpg"><img src="resources/images/lhc-small.jpg" /></a>
 
 ## Introduction
 
