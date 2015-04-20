@@ -9,4 +9,4 @@ bin/expm
 *.dump
 .rebar
 logs/*
-*.sp[po]
+*.sw[po]
