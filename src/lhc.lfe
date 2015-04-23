@@ -86,7 +86,7 @@
   (let ((options (++ lhc-opts (get-default-options))))
     (funcall (proplists:get_value 'callback options)
              (list url method headers data timeout lhttpc-opts options)
-             (opts->rec options)
+             options
              (lhttpc:request url method headers data timeout lhttpc-opts))))
 
 ;;; Callback
