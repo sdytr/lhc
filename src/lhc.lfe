@@ -93,7 +93,12 @@
 
 (defun parse-results
   ((args opts result) (when (is_list opts))
-   (parse-results args (opts->rec opts) result))
+   ;; we want to make sure that any library using lhc and setting their own
+   ;; parse-results callback has *their* callback executed
+   (funcall (proplists:get_value 'callback opts)
+            args
+            (opts->rec opts)
+            result))
   ((_ (match-lhc-opts return 'status) `#(ok #(,sts ,_ ,_)))
    sts)
   ((_ (match-lhc-opts return 'headers) `#(ok #(,_ ,hdrs ,_)))
