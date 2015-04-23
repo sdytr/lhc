@@ -95,7 +95,7 @@
   ((args opts result) (when (is_list opts))
    ;; we want to make sure that any library using lhc and setting their own
    ;; parse-results callback has *their* callback executed
-   (funcall (proplists:get_value 'callback opts)
+   (funcall (proplists:get_value 'callback opts #'parse-results/3)
             args
             (opts->rec opts)
             result))
